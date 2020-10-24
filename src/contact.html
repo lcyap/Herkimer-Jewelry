@@ -1,0 +1,259 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Herkimer | Everyday Jewelry</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!--BOOTSTRAP CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!--MY CSS-->
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Montserrat|Quicksand&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+    </style>
+  </head>
+  <body>
+    <div class="wrapper d-flex align-items-stretch">
+      <nav id="sidebar">
+        <div class="p-4 pt-5">
+          <a
+            href="index.html"
+            class="img logo rounded-circle mb-5"
+            style="background-image: url(images/img.png);"
+          ></a>
+          <ul class="list-unstyled components mb-5">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+
+            <li class="active">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            </button>
+
+            <h3>HERKIMER JEWELRY</h3>
+          </div>
+        </nav>
+        <!--CONTACT FORM START-->
+        <h3 class="mb-4">CONTACT US</h3>
+        <div class="container" id="contactform1">
+          <form action="https://httpbin.org/post" method="post">
+            <div class="row">
+              <div class="col">
+                <label for="firstname">First Name:</label>
+                <input class="form-control" type="text" id="firstname" name="firstname" required />
+              </div>
+              <div class="col">
+                <label for="lastname">Last Name:</label>
+                <input class="form-control" type="text" id="lastname" name="lastname" required />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <label for="phone">Phone: </label>
+                <input
+                  class="form-control"
+                  id="phone"
+                  type="tel"
+                  pattern="^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$"
+                  required
+                  placeholder="xxx-xxx-xxxx"
+                />
+              </div>
+              <div class="col">
+                <label for="email">Email Address:</label>
+                <input class="form-control" id="email" name="email" required />
+              </div>
+            </div>
+
+            <label>Would you like to be phoned? </label>
+            <input id="yes" type="checkbox" checked />
+            <label for="yes">Yes</label>
+            <input id="no" type="checkbox" />
+            <label for="no">No</label>
+            <br />
+            <label for="address">Address:</label>
+            <input class="form-control" id="address" name="address" required />
+            <div class="row">
+              <div class="col">
+                <label>City:</label>
+                <input class="form-control" list="city" required />
+                <datalist id="city">
+                  <option value="Toronto"></option>
+                  <option value="Scarborough"></option>
+                  <option value="North York"></option>
+                  <option value="Markham"></option>
+                  <option value="Mississauga"></option>
+                  <option value="Hamilton"></option>
+                  <option value="Barrie"></option>
+                  <option value="Pickering"></option>
+                  <option value="Ajax"></option>
+                </datalist>
+              </div>
+              <div class="col">
+                <label for="postal">Postal Code:</label>
+                <input
+                  class="form-control"
+                  id="postal"
+                  type="text"
+                  pattern="^[a-zA-Z]{1}[0-9]{1}[a-zA-Z]{1}[- ]{0,1}[0-9]{1}[a-zA-Z]{1}[0-9]{1}"
+                  required
+                  placeholder="A0A 0A0"
+                />
+              </div>
+            </div>
+
+            <fieldset class="form-group">
+              <legend class="col-form-label">What is your concern about?</legend>
+              <div class="row">
+                <div class="col-sm-10">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="gridRadios"
+                      id="gridRadios1"
+                      value="Comment"
+                      checked
+                    />
+                    <label class="form-check-label" for="gridRadios1">
+                      Comment
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="gridRadios"
+                      id="gridRadios2"
+                      value="Question"
+                    />
+                    <label class="form-check-label" for="gridRadios2">
+                      Question
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="gridRadios"
+                      id="gridRadios3"
+                      value="others"
+                    />
+                    <label class="form-check-label" for="gridRadios3">
+                      Other
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input
+                      type="text"
+                      name="addCommOthers"
+                      class="is-hidden"
+                      id="addCommOthers"
+                      placeholder="Type in your concern"
+                    />
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <textarea
+              class="form-control"
+              id="feedback"
+              name="message"
+              rows="10"
+              cols="50"
+              placeholder="Enter your message here"
+            ></textarea>
+
+            <div class="col-sm-10">
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="reset" class="btn btn-primary">Clear</button>
+            </div>
+            <input type="hidden" value="Lea Yap" />
+          </form>
+        </div>
+        <!--CONTACT FORM END-->
+      </div>
+    </div>
+    <!--FOOTER-->
+    <footer class="page-footer font-small special-color-dark pt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <ul class="social-icons">
+              <li>
+                <a href="http://www.facebook.com"><img src="images/fb.png" alt="facebook"/></a>
+              </li>
+              <li>
+                <a href="http://www.twitter.com"><img src="images/twitter.jpg" alt="twitter"/></a>
+              </li>
+              <li>
+                <a href="http://www.youtube.com"><img src="images/youtube.png" alt="youtube"/></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 mb-4">
+            <h6>Join our newsletter for news and updates!</h6>
+            <form class="input-group" action="https://formspree.io/xaydwrjb" method="POST">
+              <input type="text" class="form-control form-control-sm" placeholder="Your email" />
+              <div class="input-group-append">
+                <button class="btn btn-sm btn-outline-white my-0" type="button">Sign up</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright text-center py-3">
+        © 2020 Copyright: Herkimer Jewelry By Lea 
+      </div>
+    </footer>
+
+    <!--BOOTSRAP JS-->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--MY JAVASCRIPT-->
+    <script src="script.js"></script>
+  </body>
+</html>
